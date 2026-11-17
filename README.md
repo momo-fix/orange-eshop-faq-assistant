@@ -1,6 +1,6 @@
 # Orange Jordan eShop FAQ Assistant — Phase 2
 
-**CPT Model:** https://huggingface.co/orange-eshop-team/orange-eshop-team-cpt \\
+**CPT Model:** https://huggingface.co/orange-eshop-team/orange-eshop-team-cpt\
 **SFT Model:** https://huggingface.co/orange-eshop-team/orange-eshop-team-sft
 
 Two-stage fine-tuning of **GPT-2 small (124M)** on the Orange Jordan eShop FAQ dataset:
