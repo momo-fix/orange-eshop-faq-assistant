@@ -1,5 +1,8 @@
 # Orange Jordan eShop FAQ Assistant — Phase 2
 
+**CPT Model:** https://huggingface.co/orange-eshop-team/orange-eshop-team-cpt
+**SFT Model:** https://huggingface.co/orange-eshop-team/orange-eshop-team-sft
+
 Two-stage fine-tuning of **GPT-2 small (124M)** on the Orange Jordan eShop FAQ dataset:
 1. **Continued Pretraining (CPT)** on 42 cleaned FAQ documents (`2,670` train / `260` validation tokens).
 2. **Supervised Fine-Tuning (SFT)** on `488` curated question-answer pairs (`438` train / `50` validation, including `50` refusal pairs and `280` LLM-generated paraphrases) with answer-only loss and a custom `<|user|> ... <|assistant|> ... <|end|>` chat template.
