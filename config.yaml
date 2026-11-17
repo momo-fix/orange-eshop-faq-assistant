@@ -1,0 +1,37 @@
+seed: 42
+model_name: "gpt2"
+max_length: 512
+
+cpt:
+  epochs: 3
+  learning_rate: 5.0e-5
+  batch_size: 2
+  val_ratio: 0.10
+  train_file: "data/cpt/train.csv"
+  val_file: "data/cpt/val.csv"
+  output_dir: "checkpoints/cpt"
+  final_dir: "checkpoints/cpt/final"
+  loss_curve: "results/cpt_loss_curve.png"
+
+sft:
+  epochs: 3
+  learning_rate: 5.0e-5
+  batch_size: 8
+  val_ratio: 0.10
+  pairs_file: "data/sft_pairs.jsonl"
+  output_dir: "checkpoints/sft"
+  final_dir: "checkpoints/sft/final"
+  loss_curve: "results/sft_loss_curve.png"
+
+chat_tokens:
+  user: "<|user|>"
+  assistant: "<|assistant|>"
+  end: "<|end|>"
+
+eval:
+  test_file: "tests/test_questions.csv"
+  max_new_tokens: 200
+  do_sample: false
+  base_results: "results/base_results.csv"
+  cpt_results: "results/cpt_results.csv"
+  sft_results: "results/sft_results.csv"
